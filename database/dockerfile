@@ -1,0 +1,11 @@
+FROM  mysql:5.7
+
+WORKDIR /var/lib/mysql/
+
+EVN MYSQL_ROOT_PASSWORD=sENHA123
+
+EVN MYSQL_DATABASE=meubanco
+
+ADD sql.sql /docker-entryoint-initdb.d
+
+EXPOSE 3306
